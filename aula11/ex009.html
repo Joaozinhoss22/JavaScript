@@ -8,6 +8,21 @@
 <body>
     <h1>Sua Nacionalidade:</h1>
 
-    
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="name()">
+    <div id="res"></div>
+
+    <script>
+        function name(){
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtp.value)
+            res.innerHTML =`<p>Sua velocidade atual é de <strong>${pais}km/h</strong></p>`
+            if (vel == Brasil) {
+                res.innerHTML += `<p> Você esta <strong>MULTADO!</strong> por excesso de velocidade.</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
 </body>
 </html>
